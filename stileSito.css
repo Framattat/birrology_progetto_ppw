@@ -1,0 +1,525 @@
+/* STRUTTURA SITO GENERALE */
+@import url('https://fonts.googleapis.com/css?family=Cabin&display=swap');
+@font-face {
+   font-family: Fontastique;
+   src: url(font/fontastique.ttf);
+}
+
+/* KEYFRAMES PER ANIMAZIONI */
+@keyframes comparsa{
+   from { opacity: 0;}
+   to { opacity: 1;}
+}
+@keyframes comparsa2{
+   from { transform: scaleX(0); transform-origin: left;}
+   to { transform: scaleX(1);transform-origin: left;}
+}
+@keyframes movimento{
+   from { bottom: 30px;}
+   to { bottom: 50px;}
+}
+@keyframes scala{
+   from { transform: scale(1);}
+   to { transform: scale(0);}
+}
+
+/* REGOLE CSS GENERALI PAGINA */
+* {
+   margin: 0;
+   padding: 0;
+} 
+html, body {
+   background-image: url(img/imgBirra/sfondo.jpg);
+   background-position: center;
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-attachment: fixed;
+   font-family: "Cabin", sans-serif;
+   height: 100%; 
+}
+
+/* HEADER GENERALE PAGINE */
+header {
+   background-color: #badfdb;
+   border-bottom-left-radius: 100px;
+   border-bottom-right-radius: 100px;
+   box-shadow: 0px 0px 39px 8px rgba(0,0,0,0.38);
+}
+
+/* MENU NAVIGAZIONE */
+.menu {
+   align-items: center;
+   display: flex;
+   justify-content: center;
+}
+.menuSx-Dx {
+   display: inline-flex;
+ }
+.menuCentro {
+   display: inline-flex;
+   margin-left: 50px;
+   margin-right: 50px;
+   transition: transform 0.3s;
+}
+.menuCentro:hover{
+   transform: scale(1.1);
+}
+
+/* ICONE MENU */
+.iconMenu {
+   border-radius: 100%;
+   box-shadow: 0px 0px 29px 15px rgba(0,0,0,0.28);
+   display: flex;
+   flex: 1 1 auto;
+   justify-content: center;
+   margin: 20px;
+   overflow: hidden;
+   position: relative;
+ }
+.iconMenuAbout {
+   border-radius: 100%;
+   box-shadow: 0px 0px 29px 15px rgba(0,0,0,0.28);
+   display: flex;
+   flex: 1 1 auto;
+   justify-content: center;
+   overflow: hidden;
+   margin-left: 20px;
+   margin-bottom: 20px;
+   margin-top: 20px;
+   position: relative;
+ }
+.iconMenuH {
+   align-items: center;
+   background: linear-gradient(65deg, rgba(55, 217, 223, 0.4), rgba(5, 80, 192, 0.4));
+   color: #fafafa;
+   display: flex;
+   font-size: 1.5em;
+   justify-content: center;
+   opacity: 0;
+   position: absolute;
+   transition: opacity 0.25s;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   left: 0;
+   z-index: 1;
+ }
+.iconMenuH:hover {
+   opacity: 1;
+ }
+ .menuMobile {
+   display: none;
+}
+
+ /* MAIN */
+.main {
+   background-color: #fcf9ea;
+   border: 6px solid  #ff8a5c;
+   border-radius: 100px;
+   box-shadow: 7px 0px 30px 2px rgba(0,0,0,0.38);
+   margin-left: 10%;
+   margin-top: 50px;
+   margin-bottom: 100px;
+   text-align: center;
+   width: 80%;
+}
+.main h1 {
+   font-size: 2.5em;
+   font-family: "Fontastique";
+   margin-top: 40px;
+   margin-bottom: 70px;
+   margin-left: 5%;
+   margin-right: 5%; 
+}
+.main h2{
+   font-size: 1.8em;
+   font-family: Fontastique;
+   margin-bottom: 30px;
+}
+.main p{
+   font-size: 1.3em;
+   margin-left: 5%;
+   margin-right: 5%;
+   text-align: left;
+}
+.main img{
+   border-radius: 10px;
+   width:30%;
+}
+.loScroll{
+   animation:  movimento 2s ease-in-out 0.3s infinite,
+               comparsa 2s ease-in-out 0.3s infinite;
+   background-color: #fcf9ea;
+   border: 3px solid  #49beb7;
+   border-radius: 15px;
+   cursor: pointer;
+   display: none;
+   opacity: 0;
+   padding: 4px;
+   position: fixed;
+   bottom: 5%;
+   right: 5%;
+   transition: transform 0.3s, border 0.3s;
+}
+.loScroll:hover{
+   animation: step-end;
+   border: 3px solid  transparent;
+   opacity: 1;
+   transform: scale(1.2);
+}
+
+/* FOOTER */
+footer {
+   box-shadow: 2px 0 20px 0px rgba(0,0,0,0.38);
+   background-color: #49beb7;
+   border-top-left-radius: 100px;
+   border-top-right-radius: 100px;
+   bottom: 0;
+   position: relative;
+   text-align: center;
+   width: 100%;
+}
+
+/* FORMATTAZIONE BOTTONI O LINK */
+.bottoneSito {
+   border: 2px solid  #ff8a5c;
+   border-radius: 15px;
+   left: 32%; 
+   margin-bottom: 40px;
+   margin-top: 30px;
+   padding: 5px;
+   position: relative;
+   text-align: center !important;
+   transition: color 0.2s, border 0.4s;
+   width: 25% !important;
+}
+.bottoneSito:hover{
+   border: 2px solid  transparent;
+   cursor: pointer;
+   color: #ff8a5c;
+}
+.linkSito{
+   border: 2px solid  #ff8a5c;
+   border-radius: 15px;
+   color: black;
+   margin-left: 2px;
+   margin-right: 2px;
+   padding: 4px;
+   text-decoration: none;
+   transition: color 0.2s, border 0.3s;
+}
+.linkSito:hover{
+   border: 2px solid  transparent;
+   cursor: pointer;
+   color: #ff8a5c;
+}
+
+/* CSS: INDEX */
+.indexImmagini{
+   animation: comparsa 1s ease-in 1s 1 normal forwards,
+              comparsa2 1s ease-out 0.5s 1 normal forwards; 
+   margin-left: 5%;
+   margin-right: 5%;
+   margin-bottom: 5%;
+   opacity: 0;
+   transform: scaleX(0);  
+}
+
+.imgCuriosita{
+   animation: comparsa 1s ease-in 0.7s 1 normal forwards,
+              comparsa2 1s ease-out 0.2s 1 normal forwards;
+   display: none;
+   margin-bottom: 20px;
+   opacity: 0;
+   transform: scaleX(0);
+   width: 40%!important;
+}
+.curiositaDesc{
+   display: none;
+   font-weight: bold;
+   font-style: italic;
+   line-height: 1.5;
+   margin-bottom: 40px;
+   text-align: center !important;
+}
+.titoloFine{
+   color: #ff8a5c;
+   display: none;
+   left: 20% !important;
+   margin-bottom: 40px;
+   position: relative;
+   text-align: center !important;
+   width: 50% !important;
+}
+
+/* CSS : LA STORIA */
+.storiaSezioni{
+   margin-bottom: 40px;
+}
+.storiaAccenniBirra{
+   animation: comparsa 1s ease-in 0.5s 1 normal forwards;
+   float: left;
+   margin-left: 5%;
+   margin-right: 3%;
+   opacity: 0;
+}
+.storiaProduzione{
+   animation: comparsa 1s ease-in 0.5s 1 normal forwards;
+   display: none;
+   float: right;
+   margin-left: 3%;
+   margin-right: 5%;
+   opacity: 0;
+}
+.storiaIndent{
+   margin-left: 10% !important;
+}
+
+/* CSS: LA BIRRA */
+.introBirraDefault{
+   border: 3px solid  #ff8a5c;
+   margin-bottom: 30px;
+   padding: 4px;
+   transition: transform 0.2s, border 0.2s;
+   width: 50% !important;
+}
+.introBirraDefault:hover{
+   border: 3px solid  transparent;
+   cursor: pointer;
+   transform: scale(1.05);
+}
+.laBirraP{
+   margin-bottom: 40px;
+}
+#leTreBirreClick{
+	display:none;
+}
+.laBirraGalleryTitolo{
+   animation: comparsa 0.5s ease-out 1s 1 normal forwards;
+   opacity: 0;
+   font-size: 1.8em;
+   font-family: Fontastique;
+   margin-bottom: 30px;
+}
+.laBirraGallery{
+   animation: comparsa 0.5s ease-out 1s 1 normal forwards;
+   opacity: 0;
+   position: relative;
+   width: 40% !important; 
+}
+.laBirraDesc{
+   animation: comparsa 0.5s ease-out 1s 1 normal forwards;
+	margin-top: 50px;
+   margin-bottom: 60px;
+   opacity: 0; 
+	position: relative;
+}
+.frecciaSinistra{
+   animation: comparsa 0.5s ease-out 1s 1 normal forwards;
+   border: 3px solid #ff8a5c;
+   cursor: pointer;
+   position: absolute;
+   opacity: 0;
+   transition: transform 0.3s, border 0.4s;
+   bottom: 20%;
+   left: 25%;
+   width: 5% !important;
+}
+.frecciaSinistra:hover{
+   border: 2px solid  transparent;
+   cursor: pointer;
+   transform: scale(1.1);
+}
+.frecciaDestra{
+   animation: comparsa 0.5s ease-out 1s 1 normal forwards;
+   border: 3px solid #ff8a5c;
+   cursor: pointer;
+   position: absolute;
+   opacity: 0;
+   transition: transform 0.3s, border 0.4s;
+   bottom: 20%;
+	right: 25%;
+   width: 5% !important;
+}
+.frecciaDestra:hover{
+   border: 2px solid  transparent;
+   cursor: pointer;
+   transform: scale(1.1);
+}
+
+/* CSS: STILE */
+.stileIniziale{
+   margin-bottom: 60px;
+   line-height: 1.4;
+   text-align: center;
+}
+.iniziaQuizDesc{
+   margin-top: 20px;
+   text-align: center !important;
+}
+.bottoneInizia{
+   border: 3px solid  #ff8a5c;
+   margin-top: 40px;
+   margin-bottom: 50px;
+   padding: 4px;
+   transition: transform 0.2s, border 0.2s;
+   width: 50% !important;
+}
+.bottoneInizia:hover{
+   border: 3px solid  transparent;
+   cursor: pointer;
+   transform: scale(1.05);
+}
+.stileQuestionario{
+   display: none;
+ }
+.stileQuestionarioClick{
+   animation: comparsa 0.5s ease-out 1s 1 normal forwards;
+   line-height: 1.5;
+   opacity: 0;
+   text-align: center;
+ }
+.imgScorrimento {
+   margin-bottom: 30px;
+}
+.profiloStile{
+   text-align: center !important;
+}
+.bicchiereVuoto{
+   display:none;
+}
+.bicchiereVuotoClick{
+   animation: comparsa 0.5s ease-out 1s 1 normal forwards;
+   margin-bottom: 30px;
+   margin-top: 40px;
+   opacity: 0;
+}
+.riprova{
+   display:none;
+}
+.riprovaClick {
+   animation: comparsa 0.5s ease-out 1s 1 normal forwards;
+   border: 2px solid  #ff8a5c;
+   border-radius: 15px;
+   margin-top: 30px;
+   margin-bottom: 30px;
+   opacity: 0;
+   padding: 5px;
+   position: relative;
+   text-align: center !important;
+   transition: color 0.2s, border 0.4s;
+   left: 32% !important;
+   width: 25% !important;
+}
+.riprovaClick:hover{
+   border: 2px solid  transparent;
+   cursor: pointer;
+   color: #ff8a5c;
+}
+.testoRisposte{
+   font-weight: bold;
+   font-size: 1.2em;
+   margin-right: 2.5px;
+}
+
+/* CSS: ABOUT */
+.contenitoreAbout{
+   line-height: 1.7;   
+}
+.contenitoreAbout p{
+   margin-bottom: 50px; 
+}
+
+/* MEDIA QUERY */
+@media (max-width : 373px) {
+   /* MAIN */
+   .menuCentro {
+      display: inline-flex;
+      margin-left: 20px;
+      margin-right: 20px;
+      transition: transform 0.3s;
+   }
+   .menuCentro:hover{
+      transform: scale(1.1);
+   }
+   .menuCentro img{
+      width:150px;
+   }
+
+   /* FOOTER */
+   footer{
+      position: fixed;
+   }
+
+   /* LINK PAGINE MOBILE */
+   .hyperlinkMobile {
+      font-size: 1em !important;
+      margin: 2px !important;
+   }
+
+   /* QUERY: LA BIRRA */
+   .frecciaSinistra{
+      bottom:55% !important;
+   }
+   .frecciaDestra{
+      bottom:55% !important;
+   }
+}
+@media (max-width : 700px) {
+   /* MAIN */
+   .main p {
+      font-size: 1em;
+   }
+   .main h1 {
+      font-size: 1.9em;
+   }
+   .main h2{
+      font-size: 1.3em;
+   }
+   .loScroll{
+      width: 4.5%;
+   }
+
+   /* FOOTER */
+   footer {
+      font-size: 0.8em!important;
+   }
+
+   /* QUERY: LA BIRRA */
+   .frecciaSinistra{
+      bottom:30%;
+   }
+   .frecciaDestra{
+      bottom:30%;
+   }
+}
+@media (max-width : 1055px) {
+   /* MAIN */
+   .menuSx-Dx{
+      display:none
+   }
+   .menuMobile {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+   }
+
+   /* LINK PAGINE MOBILE */
+   .hyperlinkMobile {
+      color: black;
+      font-weight: bold;
+      font-size: 1.3em;
+      margin: 20px;
+      text-decoration: none;
+   }
+   .hyperlinkMobile:after {
+      border-bottom: solid 2px #000000;
+      content: '';
+      display:block;  
+      transform: scaleX(0);  
+      transition: transform 0.3s ease-in-out;
+   }
+   .hyperlinkMobile:hover:after {
+      transform: scaleX(1);
+   }
+}

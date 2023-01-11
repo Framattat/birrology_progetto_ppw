@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="it">
+   <head> 
+      <title>Birrology</title>
+      <meta charset="UTF-8">
+      <script src="js/questionario.js"></script>
+      <script src="js/libreriaSito.js"></script>
+      <script src="js/datiSito.js"></script>
+      <link rel="stylesheet" href="stileSito.css" />
+      <link rel="icon" href="img/icon.ico" />
+   </head>
+   <body>
+      <header>
+         <div class="menu">
+            <div class="menuSx-Dx">
+               <a class="iconMenu" href="storia.html">
+                  <div class="iconMenuH">Storia</div>
+                  <img src="img/laStoria.png" alt="Storia" />
+               </a>
+               <a class="iconMenu" href="birra.html">
+                  <div class="iconMenuH">La Birra</div>
+                  <img src="img/laBirra.png" alt="La Birra" />
+               </a>
+            </div>
+            <div class="menuCentro">
+               <a href="index.html">
+                  <img id="imgCentro" src="img/logoSito.png" alt="Logo Birrology" />
+               </a>
+            </div>
+            <div class="menuSx-Dx">
+               <a class="iconMenu" href="stile.html">
+                  <div class="iconMenuH">Stile</div>
+                  <img src="img/loStile.png" alt="Scegli il tuo stile" />
+               </a>
+               <a class="iconMenuAbout" href="about.html">
+                  <div class="iconMenuH">About</div>
+                  <img src="img/about.png" alt="About" />
+               </a>
+            </div>
+         </div>
+         <div class="menuMobile">
+            <a class="hyperlinkMobile" href="storia.html">
+               La Storia
+            </a>
+            <a class="hyperlinkMobile" href="birra.html">
+               La Birra
+            </a>
+            <a class="hyperlinkMobile" href="stile.html">
+               Lo Stile
+            </a>
+            <a class="hyperlinkMobile" href="about.html">
+               About
+            </a>
+         </div>      
+      </header>
+      <div class="main">
+         <h1>
+            Lo Stile
+         </h1>
+         <section class="stileIniziale" id="interfacciaIniziale">
+            <h2>
+               Trova il tuo stile!
+            </h2>
+            <p>
+					Come accennato nella home di questo sito web, dopo aver opportunamente letto le informazioni in
+					<a class="linkSito" href="storia.html"> Storia</a>
+					<a class="linkSito" href="birra.html"> Birra</a>,
+					potete provare a scegliere uno stile birrario che più si avvicina ai vostri gusti! Questo piccolo test vi consiglierà
+					una birra da poter bere secondo le vostre preferenze. Ovviamente essendo la birra un "universo" gastronomico, il test
+					fornirà un piccolo campione preso da "un'infinità" di stili differenti!
+				</p>
+				<h2 class="iniziaQuizDesc">
+					Detto ciò buona bevuta! <br/> (Clicca sull'immagine sotto per provare il test!)
+            </h2>
+				<img src="img/imgBirra/loStile1.jpg" class="bottoneInizia" id="inizia" alt=" Immagine Birra bottone"/>
+         </section>
+         <section class="stileQuestionario" id="interfacciaQuest">
+            <h2>
+               Compila il test e scopri lo stile!
+            </h2>
+				<img src="img/imgBirra/loStile2.jpg" class ="imgScorrimento" id="scorrimentoImg" alt="Immagine birra generica"/>
+				<p class ="profiloStile" id="risultato"></p>
+				<img src="img/imgBirra/loStile404.jpg" class="bicchiereVuoto" id="imgBirra404" alt="Errore 404" />
+				<p class="riprova" id="riparti">
+						Riprova il test!
+            </p>
+            <div id="stileDomande">
+            <!-- Dispensa: questionario -->  <span class="testoRisposte" id="numeroDomanda"></span>
+            <!-- Dispensa: questionario -->  <br/>
+            <!-- Dispensa: questionario -->  <span class="testoRisposte" id="testoDomanda"></span>
+            <!-- Dispensa: questionario -->  <br/>
+            <!-- Dispensa: questionario -->  <input type="radio" name="risposte" id="risposta0"/>
+            <!-- Dispensa: questionario -->  <span class="testoRisposte" id="testoRisposta0"></span>
+            <!-- Dispensa: questionario -->  <input type="radio" name="risposte" id="risposta1"/>
+            <!-- Dispensa: questionario -->  <span class="testoRisposte" id="testoRisposta1"></span>
+            <!-- Dispensa: questionario -->  <input type="radio" name="risposte" id="risposta2"/>
+				<!-- Dispensa: questionario -->  <span class="testoRisposte" id="testoRisposta2"></span>
+				<!-- Dispensa: questionario -->  <br/>
+		   		<p class="bottoneSito" id="avanti">
+			   	   Avanti
+               </p>
+            </div>
+         </section>
+      </div>
+      <img src="img/freccia.png" class="loScroll"  id="loScroll" alt="bottone su"/>
+      <footer>
+         <p>
+            Copyright 2019 © - Sito ideato e sviluppato da Lorenzo Cecio: lorenzo-cecio@hotmail.it
+         </p>
+      </footer>
+   </body>
+</html>
